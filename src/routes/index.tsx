@@ -3,27 +3,29 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "LABIAN — Relationship Eligibility Test" },
+      { name: "description", content: "A dramatic, sarcastic, interactive breakup game for LABIAN. Take the test, lose the points, face the music." },
+      { property: "og:title", content: "LABIAN — Relationship Eligibility Test" },
+      { property: "og:description", content: "Some memories deserve honesty. Take the Relationship Eligibility Test." },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <iframe
+      src="/labian.html"
+      title="LABIAN — Relationship Eligibility Test"
+      style={{
+        position: "fixed",
+        inset: 0,
+        width: "100vw",
+        height: "100vh",
+        border: "none",
+        background: "#0a0306",
+      }}
+      allow="autoplay"
+    />
   );
 }
