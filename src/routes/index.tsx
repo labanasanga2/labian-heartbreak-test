@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <iframe
-      src="/labian.html"
+      src="/index.html"
       title="LABIAN — Relationship Eligibility Test"
       style={{
         position: "fixed",
