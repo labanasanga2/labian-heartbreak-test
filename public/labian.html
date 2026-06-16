@@ -357,7 +357,7 @@
           <div class="icon">🎵</div>
           <div>
             <strong>Background Music: Chiquitita — ABBA</strong>
-            <small>Plays automatically when the assessment begins.</small>
+            <small>SING A NEW SONG CHIQUITITA</small>
           </div>
         </div>
         <audio id="bgMusic" loop preload="auto">
@@ -424,10 +424,8 @@ const AUDIO_SRC   = "audio/chiquitita.mp3"; // change as needed
 
 /* Replace these with your own image URLs or local paths like "images/1.jpg" */
 const GALLERY_IMAGES = [
-  { url: "https://images.unsplash.com/photo-1518049362265-d5b2a6467637?w=1400&auto=format&fit=crop", caption: "Where it all began." },
-  { url: "https://images.unsplash.com/photo-1494774157365-9e04c6720e47?w=1400&auto=format&fit=crop", caption: "The good days." },
-  { url: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1400&auto=format&fit=crop", caption: "Promises were made." },
-  { url: "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=1400&auto=format&fit=crop", caption: "And then... May 14." },
+ "images/img.png",
+  "images/img_1.png",
 ];
 
 /* Questions array — fully customizable. */
@@ -435,8 +433,8 @@ const QUESTIONS = [
   {
     text: `Dear Ian,\n\nDid you go clubbing on May 14 Night?`,
     choices: [
-      { label: "TRUE",  delta: +10, comment: "Excellent. Starting strong with basic honesty." },
-      { label: "FALSE", delta: -20, comment: "Oh no. We're struggling with reality already." },
+      { label: "YES",  delta: +10, comment: "Excellent. Starting strong with basic honesty." },
+      { label: "NO", delta: -20, comment: "Oh no. We're struggling with reality already." },
     ],
   },
   {
@@ -460,6 +458,29 @@ const QUESTIONS = [
       { label: "FALSE", delta: -25, comment: "We have receipts, sweetheart." },
     ],
   },
+   {
+    text: `Did you kiss your ex that night?`,
+    choices: [
+      { label: "TRUE",  delta: +15, comment: "that's not,but we can pardon that." },
+      { label: "FALSE", delta: -25, comment: "We have receipts, sweetheart." },
+    ],
+  },
+   {
+    text: `Had Laban warned you about yk who multiple times before this and that was the only thing you were never supposed to do?`,
+    choices: [
+      { label: "TRUE",  delta: +15, comment: "oops i dont know how to defend you here." },
+      { label: "FALSE", delta: -25, comment: "We have receipts, sweetheart." },
+    ],
+  },
+  {
+    text: `Did you know the consequence of ever getting involved with Laban's ex?`,
+    choices: [
+      { label: "YES",  delta: +20, comment: "Oh noooo...SO YOU KNEW." },
+      { label: "NO", delta: -40, comment: "naah uh." },
+    ],
+    effect: "chaos",
+  },
+
   {
     text: `Is it true you kissed Terence in the club washroom?`,
     choices: [
@@ -478,12 +499,12 @@ const QUESTIONS = [
   {
     text: `After everything, did you tell Laban that nothing happened?`,
     choices: [
-      { label: "TRUE",  delta: -60, comment: "Honesty appears to have left the chat." },
-      { label: "FALSE", delta: +10, comment: "At least one truthful answer today." },
+      { label: "NO",  delta: -60, comment: "Honesty appears to have left the chat." },
+      { label: "YES", delta: +10, comment: "At least one truthful answer today." },
     ],
   },
   {
-    text: `Did more happen after you got back to the room?`,
+    text: `Did more happen with you know who after you got back to the room?`,
     choices: [
       { label: "TRUE",  delta: 0, comment: "Critical failure detected. All relationship points have been removed.", final: true },
     ],
